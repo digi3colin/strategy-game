@@ -1,5 +1,5 @@
-import {SystemVillage, Village} from '../application/classes/system/Village.mjs';
-import {fieldData} from '../application/classes/system/Data.mjs';
+import {SystemVillage} from '../application/classes/system/Village.mjs';
+import {Village} from '../application/classes/Village.mjs';
 
 describe('Game Test', () => {
   test('new game', async ()=>{
@@ -29,10 +29,10 @@ describe('Game Test', () => {
 
     const v2c = SystemVillage.read(v2, '2024-11-09T01:02:30Z');
     expect(v2c.storage.join(',')).toBe('330,310,330,380');
-    expect(v2c.production.join(',')).toBe('0,0,0,7');
+    expect(v2c.production.join(',')).toBe('0,0,0,5');
 
     const v3 = SystemVillage.read(v2, '2024-11-09T02:02:30Z');
-    expect(v3.production.join(',')).toBe('0,0,0,7');
-    expect(v3.storage.join(',')).toBe('330,310,330,387');
+    expect(v3.production.join(',')).toBe('0,0,0,5');
+    expect(v3.storage.join(',')).toBe('330,310,330,385');
   })
 })

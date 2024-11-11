@@ -108,7 +108,11 @@ const fieldData = {
   iron_mine,
   cropland,
 }
+const buildingData = {
+
+}
 
 export {
-  fieldData
+  fieldData,
+  buildingData,
 };
