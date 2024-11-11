@@ -23,12 +23,12 @@ class SystemVillage {
         case 'upgrade':
           const building = village.buildings[job.bid];
           building.level++;
-          this.calculateProductions(village);
-          return null;
+          break;
         default:
-          return null;
       }
-    }).filter(j => j !== null);
+
+      this.calculateProductions(village);
+    }).filter(j => !!j);
 
     return this.process(village, now);
   }
